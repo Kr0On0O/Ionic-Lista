@@ -12,14 +12,15 @@ import {PendientesComponent} from '../pages/pendientes/pendientes.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {TerminadosComponent} from "../pages/terminados/terminados.component";
-
+import {AgregarComponent} from '../pages/agregar/agregar.component';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,8 @@ import {TerminadosComponent} from "../pages/terminados/terminados.component";
     MyApp,
     TabsPage,
     PendientesComponent,
-    TerminadosComponent
+    TerminadosComponent,
+    AgregarComponent
   ],
   providers: [
     StatusBar,
