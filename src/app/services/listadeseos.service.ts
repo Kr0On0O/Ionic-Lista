@@ -5,17 +5,26 @@ export class ListaDeseos {
 listas:Listas[]=[];
 
   constructor() {
-  let lista1=new Listas("Supermercado");
-  let lista2=new Listas("Juegos");
-  let lista3=new Listas("Estudios");
-  this.listas.push(lista1);
-  this.listas.push(lista2);
-  this.listas.push(lista3);
+    this.cargarStorage();
 
 
     console.log("Lista deseos funciona");
 
    }
+   cargarStorage(){
+     if(localStorage.getItem("data")){
+     this.listas=JSON.parse(localStorage.getItem("data"));
+      }
+    }
 
+
+   guardarStorage(){
+     localStorage.setItem("data",JSON.stringify(this.listas));
+   }
+
+   guardarNueva(lista:Listas){
+     this.listas.push(lista);
+     this.guardarStorage();
+   }
 
 }
