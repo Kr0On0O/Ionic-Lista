@@ -5,7 +5,8 @@ import { MyApp } from './app.component';
 //servicios
 import {ListaDeseos} from '../app/services/listadeseos.service';
 
-
+//Pipes
+import {PlaceHolderPipe} from '../app/pipes/placeholder.pipe';
 //paginas
 import { TabsPage } from '../pages/tabs/tabs';
 import {PendientesComponent} from '../pages/pendientes/pendientes.component';
@@ -18,6 +19,7 @@ import {AgregarComponent} from '../pages/agregar/agregar.component';
   declarations: [
     MyApp,
     TabsPage,
+    PlaceHolderPipe,
     PendientesComponent,
     TerminadosComponent,
     AgregarComponent
