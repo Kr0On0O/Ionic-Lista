@@ -8,6 +8,7 @@ import {ListaDeseos} from '../app/services/listadeseos.service';
 //Pipes
 import {PlaceHolderPipe} from '../app/pipes/placeholder.pipe';
 //paginas
+import {Detalle} from '../pages/detalle/detalle.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import {PendientesComponent} from '../pages/pendientes/pendientes.component';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,6 +23,7 @@ import {AgregarComponent} from '../pages/agregar/agregar.component';
     PlaceHolderPipe,
     PendientesComponent,
     TerminadosComponent,
+    Detalle,
     AgregarComponent
   ],
   imports: [
@@ -34,6 +36,7 @@ import {AgregarComponent} from '../pages/agregar/agregar.component';
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
+    Detalle,
     AgregarComponent
   ],
   providers: [
