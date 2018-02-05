@@ -13,7 +13,7 @@
     </ion-note>
   </ion-item>
   <ion-list>
-    <ion-item (click)=verDetalle(lista,i) *ngFor="let item of lista.Items |slice:0:2 ">
+    <ion-item  *ngFor="let item of lista.Items |slice:0:2 ">
       <ion-icon *ngIf="item.completo" ios="ios-checkbox" md="md-checkbox"></ion-icon>
        <ion-icon *ngIf="!item.completo" ios="ios-square-outline" md="md-square-outline"></ion-icon>{{item.nombre}}
     </ion-item>

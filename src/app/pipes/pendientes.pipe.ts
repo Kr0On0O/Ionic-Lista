@@ -3,7 +3,8 @@ import {Listas,ListaItem} from '../clases/index';
 
 
 @Pipe({
-  name:'pendientes'
+  name:'pendientes',
+  pure:false
 })
 export class PendientesPipe implements PipeTransform {
   transform(listas:Listas[],completa:boolean=false): Listas[] {

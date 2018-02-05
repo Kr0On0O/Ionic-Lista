@@ -14,7 +14,7 @@ export class DetalleComponent implements OnInit {
     public _navParams:NavParams,
      public _listaDeseos:ListaDeseos,
    public _alertController:AlertController) {
-    this.idx=_navParams.get("id");
+    this.idx=_navParams.get("index");
     this.lista=_navParams.get("lista");
     console.log(this.idx);
   }

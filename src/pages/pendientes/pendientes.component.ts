@@ -18,7 +18,7 @@ export class PendientesComponent implements OnInit {
     this._navControler.push(AgregarComponent)
   }
   verDetalle(lista,index){
-    this._navControler.push(DetalleComponent,{lista:lista,id:index})
+    this._navControler.push(DetalleComponent,{lista,index})
   }
   ngOnInit() {}
 }
