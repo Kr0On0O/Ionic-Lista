@@ -5,17 +5,17 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let lista of _listaDeseos.listas; let i =index" >
-    <ion-item (click)=verDetalle(lista,i) color="dark">
+  <ion-card *ngFor="let lista of _listaDeseos.listas |pendientes; let i=index" (click)=verDetalle(lista,i)>
+    <ion-item color="dark">
     <h2>{{lista.nombre}}</h2>
     <ion-note item-right>
       {{lista.Items.length}}
     </ion-note>
   </ion-item>
-  <ion-list (click)=verDetalle(lista,i)>
-    <ion-item *ngFor="let item of lista.Items |slice:0:2 ">
-      <ion-icon *ngIf="item.completado" ios="ios-checkbox" md="md-checkbox"></ion-icon>
-       <ion-icon *ngIf="!item.completado" ios="ios-square-outline" md="md-square-outline"></ion-icon>{{item.nombre}}
+  <ion-list>
+    <ion-item (click)=verDetalle(lista,i) *ngFor="let item of lista.Items |slice:0:2 ">
+      <ion-icon *ngIf="item.completo" ios="ios-checkbox" md="md-checkbox"></ion-icon>
+       <ion-icon *ngIf="!item.completo" ios="ios-square-outline" md="md-square-outline"></ion-icon>{{item.nombre}}
     </ion-item>
 
     <ion-item  *ngIf="lista.Items.length>2">

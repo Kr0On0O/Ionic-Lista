@@ -26,5 +26,9 @@ listas:Listas[]=[];
      this.listas.push(lista);
      this.guardarStorage();
    }
+   borarLista(idx:number){
+      this.listas.splice(idx,1);
+      this.guardarStorage();
 
+   }
 }
