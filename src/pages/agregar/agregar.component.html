@@ -17,7 +17,7 @@
         <ion-label floating>Item</ion-label>
         <ion-input [(ngModel)]="nombreItem" (keyup.enter)="agregar()"  name="nombreItem"  type="text"></ion-input>
       </ion-item>
-      <button ion-button class="button-block" (click)="agregar()">Guardar</button>
+      <button ion-button class="button-block" (click)="agregar()">Añadir Item</button>
     </ion-card-content>
   </ion-card>
 
@@ -43,6 +43,6 @@
 
  <button ion-button icon-left class="button-block" (click)="agregarLista()" >
    <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
-   Agregar Lista
+   Guardar Lista
  </button>
 </ion-content>

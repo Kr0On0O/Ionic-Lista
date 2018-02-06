@@ -3,6 +3,7 @@ import {NavController,NavParams} from 'ionic-angular';
 import {Listas,ListaItem} from '../../app/clases/index';
 import {ListaDeseos} from '../../app/services/listadeseos.service';
 import {AlertController} from 'ionic-angular';
+import {PendientesComponent} from '../pendientes/pendientes.component';
 @Component({
   selector: 'app-detalle',
   templateUrl: 'detalle.component.html',
@@ -20,6 +21,7 @@ export class DetalleComponent implements OnInit {
   }
 
   ngOnInit() {}
+
 
 
   actualizar(item:ListaItem){
@@ -53,7 +55,9 @@ export class DetalleComponent implements OnInit {
    });
    confirm.present();
  }
-
+ volverPendientes(){
+   this._navControler.pop();
+ }
 
 
 }
